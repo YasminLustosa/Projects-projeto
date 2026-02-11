@@ -1,0 +1,4 @@
+data,hora,dia_semana,bairro,tipo_acidente,vitimas,veiculos_envolvidos
+2026-01-28,08:30,Quinta-feira,Centro,Colisão,2,1
+2026-01-28,09:15,Sexta-feira,Zona Norte,Atropelamento,1,1
+2026-01-28,10:00,Quinta-feira,Zona Sul,Colisão,3,2

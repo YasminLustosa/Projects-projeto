@@ -1,0 +1,23 @@
+import pandas as pd
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="127.0.0.1",
+    port="3306",
+    user="root",
+    password="",
+    database="acidentes_transito"
+)
+
+cursor = conn.cursor()
+
+cursor.execute("select * from acidentes")
+results = cursor.fetchall()
+
+df = pd.DataFrame(results, columns=['id', 'data', 'hora', 'dia_semana', 'bairro', 'tipo_acidente', 'vitimas', 'veiculos_envolvidos'])
+
+print(df.head())
+
+
+cursor.close()
+conn.close()
